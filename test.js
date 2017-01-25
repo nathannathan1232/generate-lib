@@ -1,6 +1,6 @@
 'use strict';
 
-const Bob = require('./lib2.js');
+const Generator = require('./lib.js');
 const fs = require('fs');
 
 
@@ -8,7 +8,7 @@ const fs = require('fs');
 	Learns from movie lines and generates english-like words.
 */
 
-var word_gen = new Bob({
+var word_gen = new Generator({
 	after_nodes: 5, // 3 is default, but 5 seems to work better for words
 	first_nodes: 1, // We only need 1 for this. Default is 2
 });
@@ -40,7 +40,7 @@ for(var i = 0; i < 5; i++)
 	Generates math problems.
 */
 
-var math_gen = new Bob({
+var math_gen = new Generator({
 	after_nodes: 8,
 	related_nodes: 1,
 });
@@ -59,7 +59,7 @@ for(var i = 0; i < 5; i++)
 	Generates english sentences.
 */
 
-var sentence_gen = new Bob({});
+var sentence_gen = new Generator({});
 
 var sentences = fs.readFileSync('./resources/movie_lines.txt')
 	.toString()
