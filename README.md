@@ -1,9 +1,6 @@
-# generate-lib
-A neural-network-like procedural generation library for javascript
-
 
 # Examples
-This generator is best at generating snetences, but can also work with other things. Here are some examples.
+This generator is best at generating setences, but can also work with other things. Here are some examples.
 
 ## Words
 The generator learned from movie lines and generated some interesting words it made:
